@@ -5,8 +5,8 @@ import (
 )
 
 func TestToEnglish(t *testing.T) {
-	actual := ToEnglish("りんご")
-	expected := "Apple"
+	actual := ToEnglish("バナナ")
+	expected := "Banana"
 
 	AssertTranslation(actual, expected, t)
 
@@ -22,8 +22,8 @@ func TestToEnglish(t *testing.T) {
 }
 
 func TestToJapanese(t *testing.T) {
-	actual := ToJapanese("Apple")
-	expected := "りんご"
+	actual := ToJapanese("Banana")
+	expected := "バナナ"
 
 	AssertTranslation(actual, expected, t)
 
@@ -37,6 +37,10 @@ func TestToJapanese(t *testing.T) {
 
 	AssertTranslation(actual, expected, t)
 
+	actual = ToJapanese("CoFfEe")
+	expected = "コーヒー"
+
+	AssertTranslation(actual, expected, t)
 }
 
 func AssertTranslation(actual string, expected string, t *testing.T) {

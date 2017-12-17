@@ -13,7 +13,6 @@ func ToEnglish(str string) string {
 	apiToken := getAPIToken()
 
 	rawResult := doTranslate(str, "ja", "en", apiToken)
-	fmt.Println(rawResult)
 	result := format(rawResult)
 
 	return result

@@ -18,8 +18,12 @@ func ToEnglish(str string) string {
 }
 
 func ToJapanese(str string) string {
+	apiToken := getAPIToken()
 
-	return ""
+	rawResult := doTranslate(str, "en", "ja", apiToken)
+	result := format(rawResult)
+
+	return result
 }
 
 func getAPIToken() string {

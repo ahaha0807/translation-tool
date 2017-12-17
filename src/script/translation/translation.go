@@ -6,7 +6,6 @@ import (
 	"io/ioutil"
 	"net/url"
 	"regexp"
-	"fmt"
 )
 
 func ToEnglish(str string) string {

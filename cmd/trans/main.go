@@ -1,10 +1,10 @@
-package main
+package trans
 
 import (
-	"github.com/urfave/cli"
 	"os"
-	"github.com/ahaha0807/translation/src/script/translation"
 	"fmt"
+
+	"github.com/urfave/cli"
 )
 
 func main() {
@@ -27,11 +27,11 @@ func main() {
 		}
 
 		if !context.Bool("english") {
-			result := translation.ToEnglish(context.Args().Get(0))
+			result := ToEnglish(context.Args().Get(0))
 			fmt.Println(result)
 			return nil
 		} else {
-			result := translation.ToJapanese(context.Args().Get(0))
+			result := ToJapanese(context.Args().Get(0))
 			fmt.Println(result)
 			return nil
 		}

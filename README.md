@@ -6,3 +6,11 @@
 ```bash
 go get github.com/ahaha0807/translation-tool/cmd/trans
 ```
+
+# usage
+
+```bash
+trans [日本語(Japanese word)]
+
+trans -e [英語(English word)]
+```

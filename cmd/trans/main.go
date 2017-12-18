@@ -1,4 +1,4 @@
-package trans
+package main
 
 import (
 	"os"
@@ -22,7 +22,7 @@ func main() {
 
 	app.Action = func(context *cli.Context) error {
 		if len(context.Args()) == 0 {
-			fmt.Println("USAGE: trans --[option] [words]")
+			fmt.Println("USAGE: trans [-option] [words]")
 			return nil
 		}
 
